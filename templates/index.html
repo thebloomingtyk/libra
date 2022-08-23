@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}<title>Home Page</title>{% endblock %}
+{% block content %}
+<h1>Local Library Home</h1>
+<p>Welcome to Local Library a website developed by <em>The Blooming Tyk</em>!</p>
+<h2>Dynamic content</h2>
+<p>The library has the following record counts:</p>
+<ul>
+<li><strong><a href="{% url 'books' %}">Books:</a></strong>{{num_books}}</li>
+    <li><strong>Copies:</strong>{{num_instances}}</li>
+    <li><strong>Copies Available:</strong>{{num_instances_available}}</li>
+    <li><strong><a href="{% url 'authors' %}">Authors:</a></strong>{{num_authors}}</li>
+    <li><strong>Genres:</strong>{{num_genres}}</li>
+    <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+</ul>
+{% endblock content %}
+
+
+
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, omnis! Dolore a consequatur veritatis placeat cupiditate nam, minus illo accusantium! Explicabo commodi suscipit voluptatibus fugiat debitis totam accusamus impedit ab?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fuga in similique praesentium aliquam quaerat nisi vitae fugit expedita, eos eligendi rem animi, repudiandae illo. Dignissimos dolor amet necessitatibus doloribus.
+
+
+('Dentistry', 'Dentistry'),
+        ('Optometry', 'Optometry'),
+        ('Clinics', 'Clinics'),
+        ('Nursing', 'Nursing'),
+        ('Diagnosis', 'Diagnosis'),
+        ('Radiotherapy', 'Radiotherapy'),
+        ('Anaesthetics', 'Anaesthetics'),
